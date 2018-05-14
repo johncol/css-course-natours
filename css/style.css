@@ -55,12 +55,12 @@ body {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
-.btn-white {
+.btn--white {
   background: #ffffff;
   color: #777777;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
 }
@@ -83,7 +83,7 @@ body {
   opacity: 0;
 }
 
-.btn-white::after {
+.btn--white::after {
   background: #ffffff;
 }
 
@@ -100,24 +100,24 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 4rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.btn-wrapper {
+.header__btn-wrapper {
   text-align: center;
 }
 
@@ -127,7 +127,7 @@ body {
   margin-bottom: 5rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   letter-spacing: 3.5rem;
@@ -135,7 +135,7 @@ body {
   animation: moveInLeft 1s ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   letter-spacing: 1.75rem;
