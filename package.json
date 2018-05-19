@@ -4,7 +4,8 @@
   "description": "sample page learning sass",
   "main": "index.js",
   "scripts": {
-    "compileSass": "node-sass sass/main.scss css/style.css -w"
+    "compileSass": "node-sass sass/main.scss css/style.css -w",
+    "server": "lite-server"
   },
   "repository": {
     "type": "git",
