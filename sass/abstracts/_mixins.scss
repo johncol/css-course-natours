@@ -1,0 +1,15 @@
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin sample-style-for-grid-boxes() {
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(240, 144, 34);
+  color: #fff;
+}
