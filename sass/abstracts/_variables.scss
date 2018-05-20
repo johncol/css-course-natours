@@ -4,14 +4,23 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-gray-light-1: #f7f7f7;
 $color-gray-dark: #777777;
 $color-white: #ffffff;
 $color-black: #000000;
 
 $color-black-shadow: rgba($color-black, .2);
 
+// ---------------- transitions
+
+$transition-default: all 0.2s ease-out;
+
+// ---------------- font-sizes
+
+$font-size-default: 1.6rem;
+
 // ---------------- grid
 
-$grid-max-width: 1100px;
-$gutter-vertical: 3rem;
-$gutter-horizontal: 2rem;
+$grid-max-width: 114rem;
+$gutter-vertical: 4rem;
+$gutter-horizontal: 6rem;

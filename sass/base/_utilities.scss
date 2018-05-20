@@ -1,0 +1,15 @@
+.u-align-center {
+  text-align: center;
+}
+
+.u-margin-bottom {
+  &-small {
+    margin-bottom: 1.5rem;
+  }
+  &-medium {
+    margin-bottom: 4rem;
+  }
+  &-big {
+    margin-bottom: 8rem;
+  }
+}

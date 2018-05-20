@@ -1,0 +1,16 @@
+.section-about {
+  background: $color-gray-light-1;
+  padding: 25rem 0 30rem;
+  margin-top: -20vh;
+}
+
+.section-features {
+  @include background-primary-color-with-image('nat-4.jpg');
+  padding: 20rem 0;
+  margin-top: -12rem;
+  transform: skewY(-7deg);
+  
+  & > * {
+    transform: skewY(7deg);
+  }
+}

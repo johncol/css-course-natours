@@ -1,4 +1,5 @@
 .row {
+  @include clearfix();
   max-width: $grid-max-width;
   margin: 0 auto;
 
@@ -6,12 +7,8 @@
     margin-bottom: $gutter-vertical;
   }
 
-  @include clearfix;
-
   [class^="col-"] {
     float: left;
-
-    @include sample-style-for-grid-boxes;
   
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
