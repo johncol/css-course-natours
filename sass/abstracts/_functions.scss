@@ -1,0 +1,15 @@
+@function background-linear-gradient-with-colors($light-color, $dark-color, $opacity) {
+  @return linear-gradient(to right bottom, rgba($light-color, $opacity), rgba($dark-color, $opacity));
+}
+
+@function background-linear-gradient($color-type, $opacity: 1) {
+  @if $color-type == $color-type-primary {
+    @return background-linear-gradient-with-colors($color-primary-light, $color-primary-dark, $opacity);
+  }
+  @else if $color-type == $color-type-secondary {
+    @return background-linear-gradient-with-colors($color-secondary-light, $color-secondary-dark, $opacity);
+  }
+  @else if $color-type == $color-type-tertiary {
+    @return background-linear-gradient-with-colors($color-tertiary-light, $color-tertiary-dark, $opacity);
+  }
+}
