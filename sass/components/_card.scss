@@ -145,4 +145,37 @@ $card-height: 50rem;
     font-weight: 100;
   }
 
+  @include media-query-for(tablet-portrait) {
+    background-color: $color-white;
+    height: auto;
+    
+    &__side {
+      height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+  
+      &--back {
+        transform: rotateY(0);
+        height: 30rem;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+  
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+  
+    &__price-box {
+      margin-bottom: 4rem;
+    }
+  
+    &__price-only {
+      font-size: 1.4rem;
+    }
+  
+    &__price-value {
+      font-size: 4rem;
+    }  
+  }
 }

@@ -3,15 +3,38 @@
   max-width: $grid-max-width;
   margin: 0 auto;
 
+  @include media-query-for(tablet-portrait) {
+    max-width: 60rem;
+    padding: 0 2rem;
+  }
+
+  // @include media-query-for(tablet-portrait) {
+  //   max-width: 50rem;
+  //   padding: 0 2rem;
+  // }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include media-query-for(tablet-portrait) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   [class^="col-"] {
     float: left;
+
+    @include media-query-for(tablet-portrait) {
+      width: 100% !important;
+    }
   
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include media-query-for(tablet-portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
     }
   }
 

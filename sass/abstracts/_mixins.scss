@@ -29,3 +29,21 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin media-query-for($device) {
+  @if $device == small-phone {
+    @media (max-width: 21.25em) { @content; } // 340px
+  }
+  @if $device == phone {
+    @media (max-width: 37.5em) { @content; } // 600px
+  }
+  @if $device == tablet-portrait {
+    @media (max-width: 56.25em) { @content; } // 900px
+  }
+  @if $device == tablet-landscape {
+    @media (max-width: 75em) { @content; } // 1200px
+  }
+  @if $device == big-desktop {
+    @media (min-width: 112.5em) { @content; } // 1800px
+  }
+}

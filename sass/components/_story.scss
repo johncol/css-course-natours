@@ -8,8 +8,24 @@
   font-size: $font-size-default;
   transform: skewX(-12deg);
 
+  @include media-query-for(tablet-portrait) {
+    width: 120%;
+    margin: 0 -10%;
+  }
+
+  @include media-query-for(phone) {
+    width: 100%;
+    margin: 0;
+    transform: skewX(0);
+    padding: 4rem;
+  }
+
   & > * {
     transform: skewX(12deg);
+    
+    @include media-query-for(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__shape {
@@ -20,6 +36,10 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    
+    @include media-query-for(phone) {
+      transform: translateX(-1rem) skewX(0);
+    }
   }
 
   &__caption {

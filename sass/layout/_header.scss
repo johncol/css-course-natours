@@ -3,6 +3,11 @@
   height: 90vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+  
+  @include media-query-for(phone) {
+    height: 50vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;

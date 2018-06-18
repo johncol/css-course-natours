@@ -16,6 +16,10 @@
     display: block;
     width: 90%;
     transition: $transition-default;
+    
+    @include media-query-for(tablet-portrait) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -51,6 +55,13 @@
   &__radio_group {
     width: 49%;
     display: inline-block;
+
+    @include media-query-for(phone) {
+      width: 100%;
+      &:not(:first-child) {
+        margin-top: 2rem;
+      }
+    }
   }
 
   &__radio_label {
