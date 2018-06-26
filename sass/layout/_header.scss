@@ -1,8 +1,14 @@
 .header {
-  @include background-primary-color-with-image('hero.jpg');
-  height: 90vh;
+  @include background-primary-color-with-image('hero-small.jpg', 'hero.jpg');
+  height: 85vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+
+  @supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) {
+    height: 90vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
   
   @include media-query-for(phone) {
     height: 50vh;

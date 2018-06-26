@@ -9,13 +9,17 @@ $card-height: 50rem;
   overflow: hidden;
   
   &__side {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     height: $card-height;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.8s ease;
+    
+    @supports (transition: transform 0.8s ease) {
+      transition: all 0.8s ease;
+    }
 
     &--front {
       transform: rotateY(0);
@@ -55,21 +59,30 @@ $card-height: 50rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
     &--1 {
-      background-image:
-        background-linear-gradient($color-type-secondary),
-        url(../img/nat-5.jpg);
+      background-image: url(../img/nat-5.jpg);
+      @supports (background-blend-mode: screen) {
+        background-image:
+          background-linear-gradient($color-type-secondary),
+          url(../img/nat-5.jpg);
+      }
     }
 
     &--2 {
-      background-image:
-        background-linear-gradient($color-type-primary),
-        url(../img/nat-6.jpg);
+      background-image: url(../img/nat-6.jpg);
+      @supports (background-blend-mode: screen) {
+        background-image:
+          background-linear-gradient($color-type-primary),
+          url(../img/nat-6.jpg);
+      }
     }
 
     &--3 {
-      background-image:
-        background-linear-gradient($color-type-tertiary),
-        url(../img/nat-7.jpg);
+      background-image: url(../img/nat-7.jpg);
+      @supports (background-blend-mode: screen) {
+        background-image:
+          background-linear-gradient($color-type-tertiary),
+          url(../img/nat-7.jpg);
+      }
     }
   }
 

@@ -35,8 +35,12 @@
 }
 
 .section-stories {
-  padding: 15rem 0;
+  padding: 9rem 0;
   position: relative;
+  
+  @supports ((-webkit-clip-path: 0 0) or (clip-path: 0 0)) {
+    padding: 15rem 0;
+  }
   
   @include media-query-for(tablet-portrait) {
     padding: 8rem 0;

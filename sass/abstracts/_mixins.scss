@@ -6,21 +6,32 @@
   }
 }
 
-@mixin background-primary-color-with-image($image) {
+@mixin background-primary-color-with-image($image, $high-resolution-image: $image) {
   background-image: 
     linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
     url(../img/#{$image});
   background-size: cover;
   background-position: top;
-}
 
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), 
+         (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), 
+         (min-width: 125em) {
+    background-image: 
+      linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
+      url(../img/#{$high-resolution-image});
+  }
+}
 
 @mixin color-background-gradient() {
   display: inline-block;
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: $color-primary-light;
+  
+  @supports((-webkit-background-clip: text) or (background-clip: text)) {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    color: transparent;
+  }
 }
 
 @mixin vh-center() {
