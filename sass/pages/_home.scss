@@ -64,7 +64,7 @@
       transparent 50%,
       transparent 100%
     ),
-    url(../../img/nat-10.jpg);
+    url(../img/nat-10.jpg);
   background-size: cover;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
@@ -77,7 +77,7 @@
         transparent 65%,
         transparent 100%
       ),
-      url(../../img/nat-10.jpg);
+      url(../img/nat-10.jpg);
     width: 90vw;
     margin-right: auto;
     margin-left: auto;
@@ -89,7 +89,7 @@
         rgba($color-white, 0.9) 0%,
         rgba($color-white, 0.9) 100%
       ),
-      url(../../img/nat-10.jpg);
+      url(../img/nat-10.jpg);
     width: auto;
   }
 
