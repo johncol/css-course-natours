@@ -2,7 +2,7 @@
 
 **natours** is a sample page written with plain html and sass (from udemy advanced-css-and-sass Jonas Schmedtmann course).
 
-## envirnonmet for development
+## development environment
 
 To install packages, in a command line run
 
@@ -10,10 +10,16 @@ To install packages, in a command line run
 
 Then run
 
-    npm run compileSass
+    npm run start
 
-And in another one run
-
-    lite-server
+Which will trigger a compile sass task and a live-reload server at port 8080.
 
 Now you can write your sass rules, and it will automatically write the correspondig css and reload the browser tab to see the latest changes.
+
+## production bundle
+
+Run 
+
+    npm run build:css
+
+This will compile your sass code, concatenate it with the font styles file, auto-prefix it and minify it.
