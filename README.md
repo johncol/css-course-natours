@@ -2,6 +2,8 @@
 
 **natours** is a sample page written with plain html and sass (from udemy advanced-css-and-sass Jonas Schmedtmann course).
 
+Check it working at https://johncol.github.io/css-course-natours/
+
 ## development environment
 
 To install packages, in a command line run
