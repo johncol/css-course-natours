@@ -16,7 +16,7 @@ Then run
 
 Which will trigger a compile sass task and a live-reload server at port 8080.
 
-Now you can write your sass rules, and it will automatically write the correspondig css and reload the browser tab to see the latest changes.
+Now you can write your sass rules, and it will automatically write the corresponding css and reload the browser tab to see the latest changes.
 
 ## production bundle
 
